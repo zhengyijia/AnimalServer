@@ -77,7 +77,7 @@ public class FoodinfoController {
 
 		for(Foodinfo foodinfo: foodinfoIter){
 			int day = foodinfo.getDay();
-			if (day < num) {
+			if (day-1 < num) {
 				FoodStat foodStat = foodStatList.get(day-1);
 				foodStat.setWeight(foodStat.getWeight() + foodinfo.getWeight());
 				foodStat.setEnergy(foodStat.getEnergy() + foodinfo.getEnergy());
